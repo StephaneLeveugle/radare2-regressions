@@ -851,14 +851,14 @@ typedef char FILE_NAME;
 EOF
 RUN
 
-NAME=tc test
+NAME=tcd test
 FILE=-
 CMDS=<<EOF
 "td typedef char FILE_NAME;"
 "td union x{int x; int y; int z;}"
 "td enum Foo {COW=1,BAR=2};"
 "td struct three_elements{int x; char y; float z;}"
-tc
+tcd
 EOF
 EXPECT=<<EOF
 union x {int32_t x; int32_t y; int32_t z;};
